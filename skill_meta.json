@@ -1,0 +1,27 @@
+{
+    "_first_build": false,
+    "code": "from chatterbox.util.internet import get_local_ip\n\n\n\n\nfrom chatterbox.builder.skill_builder import SkillBuilder\n\n\ndef create_skill():\n  s = SkillBuilder('IP address')\n  s.get_utterance()\n  s.speak_dialog([str('''my eye pea address is''')])\n  s.add_code_line(\"self.speak(str(get_local_ip()), wait=True)\")\n  s.add_padatious_intent(name=\"intent_name2\", samples=[\"what is your network address\", \"tell me your network address\", \"tell me your ip address\", \"whats your ip address\", \"what is your ip address\", \"whats your network address\"])\n  s.build_skill()",
+    "color": "#EF476F",
+    "description": "speak ip address",
+    "dialogs": [
+        "my eye pea address is"
+    ],
+    "enabled": true,
+    "hide": true,
+    "is_default": true,
+    "name": "ip_address",
+    "picture": "../images/internet.svg",
+    "samplephrase": "what is your network address\n",
+    "skill_id": "ip_address",
+    "utterances": [
+        "what is your network address",
+        "whats your network address",
+        "what is your ip address",
+        "what's your ip address",
+        "tell me your ip address",
+        "what's your network address",
+        "whats your ip address",
+        "tell me your network address"
+    ],
+    "xml": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"on_phrase_examples\" id=\";bxSH$6Yemg}Df#{6O8t\" x=\"46\" y=\"84\"><mutation items=\"6\"></mutation><value name=\"PVALUE1\"><shadow type=\"multi_text\" id=\"0Y%d}s{nEUp;Iy]lK[*s\"><field name=\"NAME\"></field></shadow><block type=\"multi_text\" id=\"Jb[PJe2OO22*i1Hb5UR?\"><field name=\"NAME\">what is your network address</field></block></value><value name=\"PVALUE2\"><shadow type=\"multi_text\" id=\"M5IHD57xRo9CGTXRnog,\"><field name=\"NAME\"></field></shadow><block type=\"multi_text\" id=\"S:r,b~#.?}=n#t3p89LE\"><field name=\"NAME\">tell me your network address</field></block></value><value name=\"PVALUE3\"><shadow type=\"multi_text\" id=\"Yxlw*p+KN)Jj3g37bN[Q\"><field name=\"NAME\"></field></shadow><block type=\"multi_text\" id=\"+%qgv~3zXixH:PE.zN?(\"><field name=\"NAME\">tell me your ip address</field></block></value><value name=\"PVALUE4\"><shadow type=\"multi_text\" id=\"6I1jDjUg05Vbz:c/YH4y\"><field name=\"NAME\"></field></shadow><block type=\"multi_text\" id=\"dSBxEFtNDDwC1OdUM,:%\"><field name=\"NAME\">what's your ip address</field></block></value><value name=\"PVALUE5\"><shadow type=\"multi_text\" id=\"#qg67=A(yVy.@?f/`12|\"><field name=\"NAME\"></field></shadow><block type=\"multi_text\" id=\"}46o;2CMK6oGd8j%ar-p\"><field name=\"NAME\">what is your ip address</field></block></value><value name=\"PVALUE6\"><shadow type=\"multi_text\" id=\"z_4=!y?hf=`zlJ{GB6=}\"><field name=\"NAME\"></field></shadow><block type=\"multi_text\" id=\"RXm4b@Sb-:^Xry=d3~]P\"><field name=\"NAME\">what's your network address</field></block></value><statement name=\"CODE\"><block type=\"speak\" id=\"Ok2`f+c.`ddj*5MvjDoF\"><value name=\"MESSAGE\"><shadow type=\"text\" id=\"1((KA-Q$^M}f|-@IEUI7\"><field name=\"TEXT\"></field></shadow><block type=\"text\" id=\"1((KA-Q$^M}f|-@IEUI7\"><field name=\"TEXT\">my eye pea address is</field></block></value><next><block type=\"speak\" id=\";V6GY9Zz`6$Bl#jj(]L/\"><value name=\"MESSAGE\"><shadow type=\"text\" id=\":@JXE~NPG%T_lrPuc5nf\"><field name=\"TEXT\"></field></shadow><block type=\"my_ip\" id=\"L7:{I2O05B=J;D2MggqK\"></block></value></block></next></block></statement></block></xml>"
+}
